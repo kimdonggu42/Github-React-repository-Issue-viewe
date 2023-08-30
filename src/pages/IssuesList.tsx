@@ -36,6 +36,8 @@ export default function IssueList() {
 }
 
 const Ad = styled.img`
-  width: 100%;
+  display: flex;
+  margin: auto;
+  width: 50%;
   height: auto;
 `;
