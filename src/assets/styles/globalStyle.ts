@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  body {
+    max-width: 400px;
+    margin: auto;
+    font-size: 62.5%;
+  }
+
   a,
   a:hover,
   a:focus {
