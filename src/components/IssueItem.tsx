@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { convertDateFormat } from '../utils/convertDateFormat';
 
 export default function IssueItem({ issue }: any) {
   const navigate = useNavigate();
+  const convertDate = convertDateFormat(issue.created_at);
 
   const moveDetailPage = () => {
     navigate(`/issues/${issue.id}`, {
@@ -22,7 +24,7 @@ export default function IssueItem({ issue }: any) {
         </TitleArea>
         <DateArea>
           <div>작성자: {issue.user.login}</div>
-          <div>작성일: {issue.created_at}</div>
+          <div>작성일: {convertDate}</div>
         </DateArea>
       </InfoArea>
       <CommetArea>코멘트: {issue.comments}</CommetArea>
