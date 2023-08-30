@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import IssueItem from '../components/IssueItem';
 import { useGetIssues } from '../hooks/useGetIssues';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
+import wantedAd from '../assets/images/wanted_ad.png';
 
 function IssueList() {
   const { issues, loading, page, getIssues } = useGetIssues();
@@ -11,8 +12,14 @@ function IssueList() {
 
   return (
     <div>
-      {issues.map((value: any) => {
-        return <IssueItem key={value.id} list={value} />;
+      {issues.map((value: any, index: number) => {
+        const showAd = (index + 1) % 4 === 0;
+        return (
+          <Fragment key={value.id}>
+            <IssueItem list={value} />
+            {showAd && <img src={wantedAd} width={100} />}
+          </Fragment>
+        );
       })}
       {loading ? 'Loading...' : <div ref={targetRef}>Ref</div>}
     </div>

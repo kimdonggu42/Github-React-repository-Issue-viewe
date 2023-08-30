@@ -6,7 +6,7 @@ export const useInfiniteScroll = (callback: () => void, page: any) => {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 1.0,
+    threshold: 0.5,
   };
 
   const handleIntersection = (entries: any) => {

@@ -5,6 +5,8 @@ export const useGetIssues = () => {
   const [issues, setIssues] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
+  console.log(issues);
+
   const page = useRef<number>(1);
 
   const getIssues = async () => {
