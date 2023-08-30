@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     font-size: 62.5%;
   }
