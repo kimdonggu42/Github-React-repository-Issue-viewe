@@ -5,7 +5,7 @@ export const useInfiniteScroll = (callback: () => void, page: any) => {
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '10px',
     threshold: 0.5,
   };
 

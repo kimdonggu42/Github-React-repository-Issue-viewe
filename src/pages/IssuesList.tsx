@@ -5,13 +5,15 @@ import { useGetIssues } from '../hooks/useGetIssues';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
 import wantedAd from '../assets/images/wanted_ad.png';
 
+import Spinner from '../components/Spinner';
+
 export default function IssueList() {
   const { issues, loading, page, getIssues } = useGetIssues();
   const { targetRef } = useInfiniteScroll(() => {
     getIssues();
   }, page);
 
-  console.log(issues);
+  // console.log(issues);
 
   return (
     <ul>
@@ -24,7 +26,7 @@ export default function IssueList() {
           </Fragment>
         );
       })}
-      {loading ? 'Loading...' : <div ref={targetRef}>Ref</div>}
+      {loading ? <Spinner /> : <div ref={targetRef} />}
     </ul>
   );
 }
