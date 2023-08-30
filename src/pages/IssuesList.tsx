@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import IssueItem from '../components/IssueItem';
 import { useGetIssues } from '../hooks/useGetIssues';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
@@ -19,7 +20,7 @@ export default function IssueList() {
         return (
           <Fragment key={issue.id}>
             <IssueItem issue={issue} />
-            {showAd && <img src={wantedAd} width={100} />}
+            {showAd && <Ad src={wantedAd} />}
           </Fragment>
         );
       })}
@@ -27,3 +28,8 @@ export default function IssueList() {
     </ul>
   );
 }
+
+const Ad = styled.img`
+  width: 100%;
+  height: auto;
+`;
