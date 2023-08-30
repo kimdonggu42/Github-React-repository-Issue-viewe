@@ -19,11 +19,11 @@ export default function IssueItem({ issue }: any) {
     <IssueItemWrap onClick={moveDetailPage}>
       <InfoArea>
         <TitleArea>
-          <div>{issue.number}</div>
-          <div>{issue.title}</div>
+          <div>#{issue.number}</div>
+          <IssueTitle>{issue.title}</IssueTitle>
         </TitleArea>
         <DateArea>
-          <div>작성자: {issue.user.login}</div>
+          <div>작성자: {issue.user.login},</div>
           <div>작성일: {convertDate}</div>
         </DateArea>
       </InfoArea>
@@ -34,26 +34,46 @@ export default function IssueItem({ issue }: any) {
 
 const IssueItemWrap = styled.li`
   display: flex;
-  border: 1px solid red;
+  column-gap: 0.4rem;
+  padding: 1rem 0.4rem;
+  border-bottom: 1px solid black;
+  cursor: pointer;
 `;
 
 const InfoArea = styled.div`
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+  width: calc(100% - 0.4rem - 5rem);
 
-  border: 1px solid blue;
+  /* border: 1px solid red; */
 `;
 
 const TitleArea = styled.div`
   display: flex;
+  column-gap: 0.2rem;
+  font-size: 1rem;
+`;
+
+const IssueTitle = styled.div`
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const DateArea = styled.div`
   display: flex;
+  column-gap: 0.2rem;
+  font-size: 0.8rem;
 `;
 
 const CommetArea = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 20%;
-  font-size: 0.9rem;
+  width: 5rem;
+  font-size: 0.8rem;
+
+  /* border: 1px solid red; */
 `;
