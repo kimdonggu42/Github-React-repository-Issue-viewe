@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export const useInfiniteScroll = (callback: () => void, page: any) => {
+export const useInfiniteScroll = (callback: () => void, page: number) => {
   const targetRef = useRef(null);
 
   const observerOptions = {
@@ -9,7 +9,7 @@ export const useInfiniteScroll = (callback: () => void, page: any) => {
     threshold: 0.5,
   };
 
-  const handleIntersection = (entries: any) => {
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     if (entries[0].isIntersecting) {
       callback();
     }
@@ -23,7 +23,7 @@ export const useInfiniteScroll = (callback: () => void, page: any) => {
     }
 
     return () => observer.disconnect();
-  }, [page.current]);
+  }, [page]);
 
   return { targetRef };
 };

@@ -9,8 +9,6 @@ export default function DetailIssue() {
   const issue = location.state.issue;
   const convertDate = convertDateFormat(issue.created_at);
 
-  // console.log(issue);
-
   return (
     <>
       <DetailIssueInfoHeader>
@@ -40,8 +38,6 @@ const DetailIssueInfoHeader = styled.div`
   align-items: center;
   column-gap: 1rem;
   margin-bottom: 2rem;
-
-  /* border: 1px solid red; */
 `;
 
 const Author = styled.img`
@@ -63,8 +59,6 @@ const InfoArea = styled.div`
   flex-direction: column;
   row-gap: 0.4rem;
   width: calc(100% - 0.4rem - 5rem);
-
-  /* border: 1px solid red; */
 `;
 
 const TitleArea = styled.div`
@@ -92,8 +86,6 @@ const CommetArea = styled.div`
   align-items: center;
   width: 5rem;
   font-size: 0.8rem;
-
-  /* border: 1px solid red; */
 `;
 
 const DetailIssueBody = styled(ReactMarkdown)`

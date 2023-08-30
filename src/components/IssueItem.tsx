@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { convertDateFormat } from '../utils/convertDateFormat';
+import { IssueProps } from '../utils/type';
 
-export default function IssueItem({ issue }: any) {
+export default function IssueItem({ issue }: IssueProps) {
   const navigate = useNavigate();
   const convertDate = convertDateFormat(issue.created_at);
 
@@ -45,8 +46,6 @@ const InfoArea = styled.div`
   flex-direction: column;
   row-gap: 0.4rem;
   width: calc(100% - 0.4rem - 5rem);
-
-  /* border: 1px solid red; */
 `;
 
 const TitleArea = styled.div`
@@ -74,6 +73,4 @@ const CommetArea = styled.div`
   align-items: center;
   width: 5rem;
   font-size: 0.8rem;
-
-  /* border: 1px solid red; */
 `;

@@ -11,13 +11,11 @@ export default function IssueList() {
   const { issues, loading, page, getIssues } = useGetIssues();
   const { targetRef } = useInfiniteScroll(() => {
     getIssues();
-  }, page);
-
-  // console.log(issues);
+  }, page.current);
 
   return (
     <ul>
-      {issues.map((issue: any, index: number) => {
+      {issues.map((issue, index) => {
         const showAd = (index + 1) % 4 === 0;
         return (
           <Fragment key={issue.id}>
