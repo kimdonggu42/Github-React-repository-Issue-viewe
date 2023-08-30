@@ -10,7 +10,7 @@ function IssueList() {
     getIssues();
   }, page);
 
-  console.log(issues);
+  // console.log(issues);
 
   return (
     <div>

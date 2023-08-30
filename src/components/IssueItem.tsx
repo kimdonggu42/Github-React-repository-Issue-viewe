@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function IssueItem({ issue }: any) {
-  return <div>{issue.title}</div>;
+  const navigate = useNavigate();
+
+  const moveDetailPage = () => {
+    navigate(`/issues/${issue.id}`, {
+      state: {
+        issue,
+      },
+    });
+  };
+
+  return <div onClick={moveDetailPage}>{issue.title}</div>;
 }
 
 export default IssueItem;
