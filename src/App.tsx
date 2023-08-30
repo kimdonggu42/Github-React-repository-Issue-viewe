@@ -1,17 +1,16 @@
 import React from 'react';
-
 import GlobalStyle from './assets/styles/globalStyle';
 import Router from './Router';
-import Header from './components/Header';
+import ErrorBoundary from './pages/Test';
+// import NotFoundError from './pages/NotFoundError';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
-      <Router />
+      <ErrorBoundary>
+        <Router />
+      </ErrorBoundary>
     </div>
   );
 }
-
-export default App;

@@ -9,7 +9,7 @@ export default function IssueItem({ issue }: IssueProps) {
   const convertDate = convertDateFormat(issue.created_at);
 
   const moveDetailPage = () => {
-    navigate(`/issues/${issue.id}`, {
+    navigate(`/facebook/react/issues/${issue.id}`, {
       state: {
         issue,
       },
