@@ -10,13 +10,15 @@ function IssueList() {
     getIssues();
   }, page);
 
+  console.log(issues);
+
   return (
     <div>
-      {issues.map((value: any, index: number) => {
+      {issues.map((issue: any, index: number) => {
         const showAd = (index + 1) % 4 === 0;
         return (
-          <Fragment key={value.id}>
-            <IssueItem list={value} />
+          <Fragment key={issue.id}>
+            <IssueItem issue={issue} />
             {showAd && <img src={wantedAd} width={100} />}
           </Fragment>
         );

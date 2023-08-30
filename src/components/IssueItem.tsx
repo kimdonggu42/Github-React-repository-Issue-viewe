@@ -1,7 +1,7 @@
 import React from 'react';
 
-function IssueItem({ list }: any) {
-  return <div>{list.title}</div>;
+function IssueItem({ issue }: any) {
+  return <div>{issue.title}</div>;
 }
 
 export default IssueItem;
