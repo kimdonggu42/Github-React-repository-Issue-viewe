@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { convertDateFormat } from '../utils/convertDateFormat';
+import ReactMarkdown from 'react-markdown';
 
 export default function DetailIssue() {
   const location = useLocation();
@@ -95,6 +96,11 @@ const CommetArea = styled.div`
   /* border: 1px solid red; */
 `;
 
-const DetailIssueBody = styled.div`
+const DetailIssueBody = styled(ReactMarkdown)`
   font-size: 1rem;
+
+  & img,
+  code {
+    max-width: 100%;
+  }
 `;
