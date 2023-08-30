@@ -5,7 +5,6 @@ import { useGetIssues } from '../hooks/useGetIssues';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
 import wantedAd from '../assets/images/wanted_ad.png';
 import { Link } from 'react-router-dom';
-
 import Spinner from '../components/Spinner';
 
 export default function IssueList() {
