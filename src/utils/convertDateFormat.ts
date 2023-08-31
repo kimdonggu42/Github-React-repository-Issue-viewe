@@ -1,4 +1,4 @@
-export const convertDateFormat = (createdAt: any) => {
+export const convertDateFormat = (createdAt: string) => {
   const createdDate = new Date(createdAt);
   const year = createdDate.getFullYear();
   const month = createdDate.getMonth() + 1;

@@ -13,6 +13,8 @@ export default function IssueList() {
     getIssues();
   }, page.current);
 
+  console.log(issues);
+
   return (
     <ul>
       {issues.map((issue, index) => {
