@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import IssueList from './pages/IssuesList';
 import DetailIssue from './pages/DetailIssue';
-import NotFoundError from './pages/NotFoundError';
+import NotFoundError from './components/NotFoundError';
 import HeaderLayout from './pages/HeaderLayout';
 
 export default function Router() {
