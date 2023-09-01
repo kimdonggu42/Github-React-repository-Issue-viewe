@@ -65,3 +65,11 @@ $ npm start
  ┣ 📜 App.tsx
  ┗ 📜 index.tsx
 ```
+
+## 시연 영상
+
+|                                                **이슈 목록/상세 화면**                                                 |                                                    **무한 스크롤**                                                     |
+| :--------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| <img width="360px" src="https://github.com/kimdonggu42/saveme/assets/115632555/69d6d751-da59-4ab3-93a2-9df9e8758181"/> | <img width="360px" src="https://github.com/kimdonggu42/saveme/assets/115632555/1aadbbef-f15a-4ad8-87aa-3142dfdaec7b"/> |
+|                                                     **에러 화면**                                                      |
+| <img width="360px" src="https://github.com/kimdonggu42/saveme/assets/115632555/b20d060c-62cf-48db-8f27-bf9d5e852af3"/> |
