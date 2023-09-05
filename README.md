@@ -10,6 +10,8 @@
 
 ## 실행 방법
 
+- 이 프로젝트는 GitHub의 REST API를 사용하고 있으므로, GitHub Personal Access Token이 없는 요청은 시간당 60회로 제한됩니다. 로컬에서의 원활한 실행을 위해 토큰 생성 후, `.env` 파일에 `REACT_APP_API_KEY = 발급받은 토큰` 과 같이 설정해주어야 합니다.
+
 ```
 $ git clone git@github.com:kimdonggu42/wanted-preonboarding-week-2-assignment.git
 
