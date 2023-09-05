@@ -7,6 +7,8 @@ import wantedAd from '../assets/images/wanted_ad.png';
 import { Link } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 
+const AD_EXPOSE_INTERVAL = 4;
+
 export default function IssueList() {
   const { issues, loading, page, getIssues } = useGetIssues();
   const { targetRef } = useInfiniteScroll(() => {
@@ -16,7 +18,7 @@ export default function IssueList() {
   return (
     <ul>
       {issues.map((issue, index) => {
-        const showAd = (index + 1) % 4 === 0;
+        const showAd = (index + 1) % AD_EXPOSE_INTERVAL === 0;
         return (
           <Fragment key={issue.id}>
             <IssueItem issue={issue} />
