@@ -2,11 +2,25 @@
 
 <img src = https://camo.githubusercontent.com/431cb39804ef7c333ffa8b0dfec7e24581654e84e3c8bcf91f64a43158c3156c/68747470733a2f2f7374617469632e77616e7465642e636f2e6b722f696d616765732f6576656e74732f323930392f62333539313861362e6a7067 />
 
-## 프로젝트 정보
+## 프로젝트 소개
+
+- Github REST API를 활용하여 개발한 프로젝트로 react repository의 issue 목록을 확인할 수 있습니다.
 
 - 진행 기간 : 2023.08.29 ~ 2023.08.31
 
-- 프로젝트 소개 : Github REST API를 활용하여 개발한 프로젝트로 react repository의 issue 목록을 확인할 수 있습니다.
+## 개발 환경
+
+### Developement
+
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white"/>
+
+### Styling
+
+<img src="https://img.shields.io/badge/styled component-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/> <img src="https://img.shields.io/badge/react markdown-brown?style=for-the-badge&logo=npm">
+
+### Convention
+
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint"> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"> <img src="https://img.shields.io/badge/husky-brown?style=for-the-badge&logo=npm"> <img src="https://img.shields.io/badge/lint staged-white?style=for-the-badge&logo=npm">
 
 ## 실행 방법
 
@@ -20,20 +34,20 @@ $ npm install
 $ npm start
 ```
 
-## 기술 스택
+## 디렉토리 구조
 
-<p align="left">
-  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/styledComponents-DB7093?style=for-the-badge">
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/esLint-4B32C3?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/husky-273A60?style=for-the-badge">
-</p>
+```
+📦 src
+ ┣ 📂 assets
+ ┃ ┣ 📂 images
+ ┃ ┗ 📂 styles
+ ┣ 📂 components
+ ┣ 📂 hooks
+ ┣ 📂 pages
+ ┣ 📂 utils
+ ┣ 📜 App.tsx
+ ┗ 📜 index.tsx
+```
 
 ## 작업 내용
 
@@ -52,21 +66,6 @@ $ npm start
 - 메인 페이지와 issue 상세 페이지에서 Header를 공통적으로 사용하기 위해 Router 외부에서 렌더링 시 에러 페이지에서도 Header가 보이기 때문에 Header를 레이아웃화 시켰습니다.
 
 - HeaderLayout 컴포넌트에서 Header를 렌더링하고 Outlet으로 children을 받아 메인 페이지와 issue 상세 페이지에서는 Header를 공통적으로 사용하되 에러 페이지에서는 안 보이도록 했습니다.
-
-## 디렉토리 구조
-
-```
-📦 src
- ┣ 📂 assets
- ┃ ┣ 📂 images
- ┃ ┗ 📂 styles
- ┣ 📂 components
- ┣ 📂 hooks
- ┣ 📂 pages
- ┣ 📂 utils
- ┣ 📜 App.tsx
- ┗ 📜 index.tsx
-```
 
 ## 작동 화면
 
